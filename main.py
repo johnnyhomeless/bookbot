@@ -12,8 +12,8 @@ def main():
 def word_counter(text):
     return len(text.split())
 
-def letter_counter(text):  # Make sure this function accepts text as an argument
-    text = text.lower()  # Lowercase the text here
+def letter_counter(text): 
+    text = text.lower() 
     dict_for_counting = {}
     for char in text:
         if char.isalpha():
@@ -24,8 +24,8 @@ def letter_counter(text):  # Make sure this function accepts text as an argument
     return dict_for_counting
 
 def report(text):
-    letter_count = letter_counter(text)  # Get letter counts
-    letter_count_items = list(letter_count.items())  # Use letter_count instead of dict_for_counting
+    letter_count = letter_counter(text)
+    letter_count_items = list(letter_count.items())
     sorted_letter_count = sorted(letter_count_items, key=lambda item: item[1], reverse=True)
     for char, count in sorted_letter_count:
         print(f"The '{char}' character was found {count} times")
